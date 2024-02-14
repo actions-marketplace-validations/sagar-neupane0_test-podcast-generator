@@ -1,0 +1,19 @@
+name: 'Podcast Generator'
+author: 'Sagar Neupane'
+description: 'Generate podcast from RSS feed'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'git-branch'
+  color: 'blue'
+inputs:
+  email: 
+    description:  Committer email 
+    required: true
+    default: ${{github.actor}}@localhost
+  name:
+    description: Committer name
+    required: true
+    default: ${{github.actor}}@localhost
